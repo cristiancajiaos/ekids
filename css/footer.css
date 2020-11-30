@@ -1,0 +1,46 @@
+footer {
+    background-color: #5a5a5a;
+    color: white; 
+}
+
+footer h4 {
+    margin-bottom: 1em; 
+}
+
+footer hr {
+    background-color: white; 
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 0; 
+}
+
+footer ul li {
+    font-size: 0.875rem; 
+}
+
+footer ul li.footer-social {
+    font-size: 2em; 
+}
+
+footer ul li:not(:last-child) {
+    margin-bottom: 0.5em; 
+}
+
+footer ul li a {
+    color: white; 
+}
+
+footer ul li a:hover {
+    color: white; 
+}
+
+footer ul li.footer-social a:hover {
+    text-decoration: none; 
+}
+
+footer .footer-copyright {
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}

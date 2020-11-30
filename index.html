@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Entrekids</title>
+        
+        <meta charset="UTF-8"/>
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/> 
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+        
+        <link rel="stylesheet" href="css/nouislider/nouislider.min.css"/>
+        
+        <link rel="stylesheet" href="css/body.css"/>
+        <link rel="stylesheet" href="css/header.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="css/footer.css"/> 
+        <link rel="stylesheet" href="css/search.css"/>
+    </head>
+    <body>
+        <header>
+            <div class="container d-none d-md-block">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand mr-4" href="#">
+                        <img src="images/entrekids.svg"/>
+                    </a>
+                    <form class="form-inline mr-auto nav-search">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Buscar actividades"/>
+                            <select class="form-control">
+                                <option>Ubicación</option>
+                                <option>Dos</option>
+                            </select>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-search fa-fw"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="ml-auto d-flex nav-user">
+                        <div class="d-flex nav-user-points mr-3">
+                            <div class="mr-3 user-points-image d-flex flex-column justify-content-center">
+                                <img src="images/coin-01.svg"/>
+                            </div>
+                            <div class="d-flex flex-column text-right">
+                                <div class="text-danger user-points-amount">999999</div>
+                                <div class="user-points-label">puntos</div>
+                            </div>
+                        </div>
+                        <div class="nav-user-controls navbar-text">
+                            <a href="#">
+                                <span class="text-danger font-weight-bold">(1)</span> Foo <i class="fas fa-angle-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="container d-xs-block d-sm-block d-md-none">
+                <div class="navbar-mobile d-flex justify-content-between align-items-center py-2">
+                    <a href="#" id="menuOpen">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                    <a href="#">
+                        <img src="images/entrekids.svg"/>
+                    </a>
+                    <a href="#">
+                        Suscribir
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container-fluid text-center main-pre-content p-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+            <div class="container-fluid filters-bar d-xs-block d-sm-block d-md-none">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" id="toggleFilters">
+                        <i class="fas fa-filter fa-fw"></i> 
+                        Filtros
+                    </a>
+                    <form class="search-activity-provider">
+                        <input type="search" placeholder="Buscar por actividad o proveedor">
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="container py-5">
+                <div class="row">
+                    <section class="filters col-md-3 col-12" id="filters">
+                        <div class="filters-main col-main">
+                            <div class="filters-nav nav nav-tabs text-center d-flex justify-content-between" role="tablist">
+                                <a id="nav-filter-calendar-tab" data-toggle="tab" href="#filter-calendar" role="tab" aria-controls="filter-calendar" aria-selected="true">
+                                    Calendario
+                                </a>
+                                <a id="nav-filter-list-tab" data-toggle="tab" href="#filter-list" role="tab" aria-controls="filter-list" aria-selected="false">
+                                    Lista
+                                </a>
+                                <a id="nav-filter-map-tab" data-toggle="tab" href="#filter-map" role="tab" aria-controls="filter-map" aria-selected="false">
+                                    Mapa
+                                </a>
+                            </div>
+                            <div class="filters-tabs tab-content">
+                                <div id="filter-calendar" class="filters-tab tab-pane fade in show active" role="tabpanel" aria-labelledby="nav-filter-calendar-tab">
+                                    <div class="filters-body">
+                                        <div class="filters-input-range">
+                                            <div class="range-labels">
+                                                <div id="leftRange"></div>
+                                                <div id="rightRange"></div>
+                                            </div>
+                                            <div id="rangeSlider">
+                                            </div>
+                                        </div>
+                                        <div class="filters-category">
+                                            <div class="filters-category-header">
+                                                <span>Ubicación</span>
+                                                <a href="#location" data-toggle="collapse">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div id="location" class="collapse">
+                                                Location Body
+                                            </div>
+                                        </div>
+                                        <div class="filters-category">
+                                            <div class="filters-category-header">
+                                                <span>Edad</span>
+                                                <a href="#age" data-toggle="collapse">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div id="age" class="collapse">
+                                                Age Body
+                                            </div>
+                                        </div>
+                                        <div class="filters-category">
+                                            <div class="filters-category-header">
+                                                <span>Categorías</span>
+                                                <a href="#categories" data-toggle="collapse">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                           <div id="categories" class="collapse">
+                                               Categories Body
+                                           </div>
+                                        </div>
+                                        <div class="filters-category">
+                                            <div class="filters-category-header">
+                                                <span>Precios</span>
+                                                <a href="#prices" data-toggle="collapse">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div id="prices" class="collapse">
+                                                Precios
+                                            </div>
+                                        </div>
+                                        <div class="filters-category">
+                                            <div class="filters-category-header">
+                                                <span>Proveedores</span>
+                                                <a href="#providers" data-toggle="collapse">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div id="providers" class="collapse">
+                                                Proveedores
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="filter-list" class="filters-tab tab-pane fade" role="tabpanel" aria-labelledby="nav-filter-list-tab">
+                                    Lista
+                                </div>
+                                <div id="filter-map" class="filters-tab tab-pane fade" role="tabpanel" aria-labelledby="nav-filter-map-tab">
+                                    Mapa
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="activities col-md-9 col-12">
+                        <div class="activities-main col-main">
+                            <div class="activities-nav nav nav-tabs text-center d-flex justify-content-between" role="tablist">
+                                <a id="nav-back" href="#">
+                                    <i class="fas fa-angle-left fa-fw"></i>
+                                </a> 
+                                <a id="nav-back" href="#">
+                                    <span>DOM</span>
+                                    <span>16/7</span>
+                                </a> 
+                                <a id="nav-back" href="#">
+                                    <span>LUN</span>
+                                    <span>17/7</span>
+                                </a> 
+                                <a id="nav-back" href="#">
+                                    <span>MAR</span>
+                                    <span>18/7</span>
+                                </a> 
+                                <a id="nav-back" href="#">
+                                    <span>MIE</span>
+                                    <span>19/7</span>
+                                </a> 
+                                <a id="nav-back" href="#">
+                                    <span>JUE</span>
+                                    <span>20/7</span>
+                                </a> 
+                                <a id="nav-back" href="#">
+                                    <span>VIE</span>
+                                    <span>21/7</span>
+                                </a> 
+                                <a id="nav-back" href="#">
+                                    <span>SAB</span>
+                                    <span>22/7</span>
+                                </a> 
+                                <a id="nav-back" href="#">
+                                    <span>DOM</span>
+                                    <span>23/7</span>
+                                </a> 
+                                <a id="nav-back" href="#">
+                                    <i class="fas fa-angle-right fa-fw"></i>
+                                </a> 
+                            </div>
+                            <div class="activities-by-day">
+                                <div class="current-day">
+                                    <h4>Domingo 17 de Julio</h4>
+                                    <form class="search-activity-provider">
+                                        <input type="search" placeholder="Buscar por actividad o proveedor">
+                                        <button type="submit">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="activities-list">
+                                    <div class="activity">
+                                        <a href="#">
+                                            <div>
+                                                <img src="https://via.placeholder.com/189x126" class="img-fluid"/>
+                                            </div>
+                                            <div>
+                                                <div class="activity-details">
+                                                    <div class="activity-description">
+                                                        <h5>Curabitur Cobortis convallis</h5>
+                                                        <p>Praesent fringilla tempor nisl, at vestibulum odio.</p>
+                                                        <p>Edad: 8 - 12 años</p>
+                                                        <p>Providencia</p>
+                                                    </div>
+                                                    <div class="activity-type">
+                                                        <img src="https://via.placeholder.com/30x30"/>
+                                                    </div>
+                                                    <div class="activity-priceandhours">
+                                                        <h5>10:00 AM</h5>
+                                                        <p>99 min</p>
+                                                        <p>Precio Entrekids: $99999</p>
+                                                        <p>Precio Normal: $99999</p>
+                                                    </div>
+                                                    <div class="activity-more text-center">
+                                                        <button class="btn btn-primary">Ver</button>
+                                                        <p>9 cupos</p>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="closed-reservations">
+                                                    Reservaciones cerradas el 17/6 a las 8:00 AM.
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="activity">
+                                        <a href="#">
+                                            <div>
+                                                <img src="https://via.placeholder.com/189x126" class="img-fluid"/>
+                                            </div>
+                                            <div>
+                                                <div class="activity-details">
+                                                    <div class="activity-description">
+                                                        <h5>Curabitur Cobortis convallis</h5>
+                                                        <p>Praesent fringilla tempor nisl, at vestibulum odio.</p>
+                                                        <p>Edad: 8 - 12 años</p>
+                                                        <p>Providencia</p>
+                                                    </div>
+                                                    <div class="activity-type">
+                                                        <img src="https://via.placeholder.com/30x30"/>
+                                                    </div>
+                                                    <div class="activity-priceandhours">
+                                                        <h5>10:00 AM</h5>
+                                                        <p>99 min</p>
+                                                        <p>Precio Entrekids: $99999</p>
+                                                        <p>Precio Normal: $99999</p>
+                                                    </div>
+                                                    <div class="activity-more text-center">
+                                                        <button class="btn btn-primary">Ver</button>
+                                                        <p>9 cupos</p>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="closed-reservations">
+                                                    Reservaciones cerradas el 17/6 a las 8:00 AM.
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="activity">
+                                        <a href="#">
+                                            <div>
+                                                <img src="https://via.placeholder.com/189x126" class="img-fluid"/>
+                                            </div>
+                                            <div>
+                                                <div class="activity-details">
+                                                    <div class="activity-description">
+                                                        <h5>Curabitur Cobortis convallis</h5>
+                                                        <p>Praesent fringilla tempor nisl, at vestibulum odio.</p>
+                                                        <p>Edad: 8 - 12 años</p>
+                                                        <p>Providencia</p>
+                                                    </div>
+                                                    <div class="activity-type">
+                                                        <img src="https://via.placeholder.com/30x30"/>
+                                                    </div>
+                                                    <div class="activity-priceandhours">
+                                                        <h5>10:00 AM</h5>
+                                                        <p>99 min</p>
+                                                        <p>Precio Entrekids: $99999</p>
+                                                        <p>Precio Normal: $99999</p>
+                                                    </div>
+                                                    <div class="activity-more text-center">
+                                                        <button class="btn btn-primary">Ver</button>
+                                                        <p>9 cupos</p>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="closed-reservations">
+                                                    Reservaciones cerradas el 17/6 a las 8:00 AM.
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="activities-footer">
+                                <div class="activities-footer-dotted text-center">
+                                    <p>Para ver todas las actividades que Entrekids tiene para tí</p>
+                                    <button class="btn">Regístrate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container py-2">
+                <div class="footer-links py-4">
+                    <div class="row">
+                        <div class="col-md-3 col-12">
+                            <h4>EntreKids</h4>
+                            
+                            <ul>
+                                <li>
+                                    <a href="#">Sobre Nosotros</a>
+                                </li>
+                                <li>
+                                    <a href="#">Nuestro Equipo</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mapa del Sitio</a>
+                                </li>
+                                <li>
+                                    <a href="#">Preguntas Frecuentes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacidad</a>
+                                </li>
+                            </ul>    
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <h4>Para Negocios</h4>
+                            
+                            <ul>
+                                <li>
+                                    <a href="#">Ser Proveedor</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ayuda Proveedores</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <h4>Contacto</h4>
+                            
+                            <ul>
+                                <li>
+                                    <a href="#">contacto@entrekids.cl</a>
+                                </li>
+                                <li>
+                                    <a href="#">Formulario de Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <h4>Síguenos</h4>
+                            
+                            <ul>
+                                <li class="footer-social">
+                                    <a href="#">
+                                        <i class="fab fa-facebook fa-fw"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-twitter fa-fw"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-instagram fa-fw"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="footer-copyright text-center py-3">
+                    2018 Entrekids &#174; Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#" class="float-right" id="menuClose">
+                <i class="fa fa-times"></i>
+            </a>
+            <div>
+                <ul>
+                    <li class="menu-item-bold">
+                        <a href="#">Actividades</a>
+                    </li>
+                    <li class="menu-item-bold">
+                        <a href="#">Proveedores</a>
+                    </li>
+                </ul>
+                <hr/>
+                <ul>
+                    <li>
+                        <a href="#">Configuración</a>
+                    </li>
+                    <li>
+                        <a href="#">Mi Cuenta</a>
+                    </li>
+                    <li>
+                        <a href="#">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <script src="js/nouislider/nouislider.min.js"></script>
+        
+        <script src="js/mobileMenu.js"></script>
+        <script src="js/toggleFilters.js"></script>
+        <script src="js/slider.js"></script>
+    </body>
+</html>

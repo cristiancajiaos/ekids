@@ -1,0 +1,35 @@
+@media screen and (max-width:767px) {
+    .current-day form.search-activity-provider {
+        display: none; 
+    }
+}
+
+@media screen and (min-width:768px) {
+    .current-day form.search-activity-provider {
+        display: block; 
+    }
+}
+
+form.search-activity-provider {
+   display: flex; 
+   flex-wrap: wrap; 
+}
+
+form.search-activity-provider input[type=search] {
+    font-size: 0.6rem;
+    border: 0; 
+    position:relative;
+    left:30px;
+    background-color: #ddd; 
+    border-radius: 4px; 
+    padding: 6px; 
+    width: 20em; 
+}
+
+form.search-activity-provider button {
+    font-size: 0.75rem; 
+    border: 0;
+    position: relative;
+    background-color: #ddd; 
+    border-radius: 4px; 
+}
